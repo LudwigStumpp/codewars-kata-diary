@@ -1,4 +1,7 @@
-def test_func(inputs: list, expected: list, func: callable):
+from typing import Callable
+
+
+def test_func(inputs: list, expected: list, func: Callable):
     """Function to test a function with multiple test cases
 
     Note: Yes I could have used pytest or unittest, but I want to keep this

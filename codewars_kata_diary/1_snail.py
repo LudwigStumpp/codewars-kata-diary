@@ -3,7 +3,7 @@
 from codewars_kata_diary import testing
 
 
-def snail(snail_map: list[list[int]]):
+def snail(snail_map: list[list[int]]) -> list[int]:
     size_grid = len(snail_map)
 
     if size_grid == 0 or size_grid == 1:
@@ -13,7 +13,7 @@ def snail(snail_map: list[list[int]]):
 
     visited = [[False for _ in range(size_grid)] for _ in range(size_grid)]
 
-    res = []
+    res: list[int] = []
 
     direction_idx = 0
     loc_row = 0
@@ -43,15 +43,15 @@ def snail(snail_map: list[list[int]]):
     return res
 
 
-def snail2(snail_map: list[list[int]]):
+def snail2(snail_map: list[list[int]]) -> list[int]:
     res = []
     while snail_map:
         res += snail_map.pop(0)
-        snail_map = list(zip(*snail_map))[::-1]
+        snail_map = [list(row) for row in zip(*snail_map)][::-1]
     return res
 
 
-def snail3(snail_map: list[list[int]]):
+def snail3(snail_map: list[list[int]]) -> list[int]:
     import numpy as np
 
     res = []
