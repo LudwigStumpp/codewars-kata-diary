@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "codewars-kata-diary"
+version = "0.1.0"
+description = ""
+authors = ["Ludwig Stumpp <42147848+LudwigStumpp@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+numpy = "^1.26.2"
+
+[tool.black]
+line-length = 79
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
