@@ -16,6 +16,9 @@ pre-commit = "^3.6.0"
 [tool.black]
 line-length = 79
 
+[tool.flake8]
+ignore = ["E203", "W503"]
+
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"

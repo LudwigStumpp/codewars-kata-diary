@@ -23,6 +23,7 @@ def test_func(inputs: list, expected: list, func: Callable):
         print("Input: ", inp)
         print("Expected Output: ", out)
         res = func(inp)
+        print("Actual Output: ", res)
         if res == out:
             print("[Passed]", end="\n\n")
             num_passed += 1
