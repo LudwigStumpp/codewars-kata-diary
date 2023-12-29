@@ -22,7 +22,10 @@ def test_func(inputs: list, expected: list, func: Callable):
         print(f"Test Case #{i + 1}")
         print("Input: ", inp)
         print("Expected Output: ", out)
-        res = func(inp)
+        if isinstance(inp, tuple):
+            res = func(*inp)
+        else:
+            res = func(inp)
         print("Actual Output: ", res)
         if res == out:
             print("[Passed]", end="\n\n")
