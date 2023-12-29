@@ -1,3 +1,5 @@
+# https://www.codewars.com/kata/52a382ee44408cea2500074c/python
+
 from codewars_kata_diary import testing
 
 import numpy as np
@@ -75,9 +77,11 @@ def determinant2(matrix):
         sum = 0
         idx_row = 0
         for idx_col in range(size):
-            sign = (-1) ** idx_col
+            sign = (-1) ** idx_col  # alternative to signs[idx_col % 2]
             multiplier = matrix[idx_row][idx_col]
-            minor_matrix = build_minor2(matrix, idx_row, idx_col)
+            minor_matrix = build_minor2(
+                matrix, idx_row, idx_col
+            )  # only real change
             sum += sign * multiplier * determinant(minor_matrix)
 
         return sum

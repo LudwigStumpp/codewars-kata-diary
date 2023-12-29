@@ -5,7 +5,7 @@ from codewars_kata_diary import testing
 import itertools
 
 
-def sum_strings(x, y):
+def sum_strings(x: str, y: str) -> str:
     res, carry = [], 0
 
     for char_x, char_y in itertools.zip_longest(
@@ -18,7 +18,7 @@ def sum_strings(x, y):
     return (str(carry) + "".join(res)).lstrip("0") or "0"
 
 
-def sum_strings2(x, y):
+def sum_strings2(x: str, y: str) -> str:
     res, carry = [], 0
 
     for char_x, char_y in itertools.zip_longest(
